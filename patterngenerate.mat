@@ -1,0 +1,8 @@
+H = hadamard(64);
+ i = randperm(64);
+B = H(:,i);
+out = reshape(B,8,8,[]);
+for x = 1 : 64
+        imwrite(out(:,:,x),strcat('',num2str(x),'.png'),'WriteMode', "append");
+end
+
